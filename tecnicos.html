@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnicos HelpCore — Equipe de suporte</title>
+  <meta name="description" content="Equipe técnica fictícia do HelpCore com cards, especialidade, chamados atribuídos, SLA e status.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="app-page">
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="app-shell">
+  
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar__brand">
+    <a class="brand" href="index.html" aria-label="HelpCore">
+      <span class="brand__mark">H</span>
+      <span>HelpCore</span>
+    </a>
+    <button class="sidebar-collapse" type="button" aria-label="Recolher sidebar" data-sidebar-collapse>‹</button>
+  </div>
+  <nav class="sidebar__nav" aria-label="Navegação administrativa">
+    <a href="dashboard.html" data-nav-link><span>▦</span><b>Dashboard</b></a>
+    <a href="chamados.html" data-nav-link><span>□</span><b>Chamados</b></a>
+    <a href="fila.html" data-nav-link><span>⇄</span><b>Fila</b></a>
+    <a href="clientes.html" data-nav-link><span>◉</span><b>Clientes</b></a>
+    <a href="tecnicos.html" data-nav-link><span>◎</span><b>Técnicos</b></a>
+    <a href="relatorios.html" data-nav-link><span>▥</span><b>Relatórios</b></a>
+    <a href="configuracoes.html" data-nav-link><span>⚙</span><b>Configurações</b></a>
+  </nav>
+  <div class="sidebar__mini-card">
+    <span>SLA geral</span>
+    <strong>91%</strong>
+    <small>Meta mensal: 88%</small>
+  </div>
+</aside>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+  <div class="app-main">
+    
+<header class="app-topbar">
+  <div class="topbar-left">
+    <button class="icon-button" type="button" aria-label="Abrir menu administrativo" data-mobile-sidebar>☰</button>
+    <div>
+      <h1>Técnicos</h1>
+      <p>Acompanhe disponibilidade e desempenho da equipe de suporte.</p>
+    </div>
+  </div>
+  <div class="topbar-search" role="search">
+    <span>⌕</span>
+    <input type="search" placeholder="Buscar chamados, clientes ou técnicos..." aria-label="Busca global visual">
+  </div>
+  <div class="topbar-actions">
+    
+    <button class="icon-button" type="button" aria-label="Alternar tema" data-theme-toggle>◐</button>
+    <div class="user-chip" aria-label="Usuário conectado">
+      <span class="avatar avatar--sm">BM</span>
+      <div><strong>Bruno Machado</strong><small>Gerente de TI</small></div>
+    </div>
+  </div>
+</header>
+
+    <main id="conteudo" class="app-content">
+      
+<section class="panel reveal">
+  <div class="panel__header panel__header--stack"><div><h2>Equipe técnica</h2><p>Técnicos responsáveis, especialidades, disponibilidade e desempenho.</p></div></div>
+  <div class="filters-grid filters-grid--small">
+    <label class="field"><span>Especialidade</span><select id="techSpecialtyFilter"><option value="">Todas</option><option>Infraestrutura</option><option>Sistemas</option><option>Redes</option><option>Atendimento</option><option>Segurança</option><option>Suporte N1</option></select></label>
+  </div>
+  <div class="technician-grid" id="techniciansGrid"></div>
+  <div class="empty-state" id="techniciansEmpty" hidden>Nenhum técnico encontrado.</div>
+</section>
+
+    </main>
+    <footer class="app-footer">HelpCore Demo • Projeto fictício para portfólio • HTML, CSS e JavaScript puro</footer>
+  </div>
+</div>
+<button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>↑</button>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

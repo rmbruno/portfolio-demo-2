@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações HelpCore — Preferências simuladas</title>
+  <meta name="description" content="Configurações simuladas do HelpCore com perfil de empresa, notificações, tema claro/escuro e regras de SLA.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="app-page">
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="app-shell">
+  
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar__brand">
+    <a class="brand" href="index.html" aria-label="HelpCore">
+      <span class="brand__mark">H</span>
+      <span>HelpCore</span>
+    </a>
+    <button class="sidebar-collapse" type="button" aria-label="Recolher sidebar" data-sidebar-collapse>‹</button>
+  </div>
+  <nav class="sidebar__nav" aria-label="Navegação administrativa">
+    <a href="dashboard.html" data-nav-link><span>▦</span><b>Dashboard</b></a>
+    <a href="chamados.html" data-nav-link><span>□</span><b>Chamados</b></a>
+    <a href="fila.html" data-nav-link><span>⇄</span><b>Fila</b></a>
+    <a href="clientes.html" data-nav-link><span>◉</span><b>Clientes</b></a>
+    <a href="tecnicos.html" data-nav-link><span>◎</span><b>Técnicos</b></a>
+    <a href="relatorios.html" data-nav-link><span>▥</span><b>Relatórios</b></a>
+    <a href="configuracoes.html" data-nav-link><span>⚙</span><b>Configurações</b></a>
+  </nav>
+  <div class="sidebar__mini-card">
+    <span>SLA geral</span>
+    <strong>91%</strong>
+    <small>Meta mensal: 88%</small>
+  </div>
+</aside>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+  <div class="app-main">
+    
+<header class="app-topbar">
+  <div class="topbar-left">
+    <button class="icon-button" type="button" aria-label="Abrir menu administrativo" data-mobile-sidebar>☰</button>
+    <div>
+      <h1>Configurações</h1>
+      <p>Preferências visuais, notificações, categorias e regras de SLA simuladas.</p>
+    </div>
+  </div>
+  <div class="topbar-search" role="search">
+    <span>⌕</span>
+    <input type="search" placeholder="Buscar chamados, clientes ou técnicos..." aria-label="Busca global visual">
+  </div>
+  <div class="topbar-actions">
+    
+    <button class="icon-button" type="button" aria-label="Alternar tema" data-theme-toggle>◐</button>
+    <div class="user-chip" aria-label="Usuário conectado">
+      <span class="avatar avatar--sm">BM</span>
+      <div><strong>Bruno Machado</strong><small>Gerente de TI</small></div>
+    </div>
+  </div>
+</header>
+
+    <main id="conteudo" class="app-content">
+      
+<section class="settings-grid">
+  <article class="panel reveal">
+    <div class="panel__header"><div><h2>Perfil da empresa</h2><p>Dados visuais usados na simulação do sistema.</p></div></div>
+    <form id="settingsForm" class="form-grid">
+      <label class="field"><span>Empresa</span><input name="company" value="HelpCore Demo"></label>
+      <label class="field"><span>E-mail de suporte</span><input name="email" type="email" value="suporte@helpcore.demo"></label>
+      <label class="field"><span>Horário de atendimento</span><input name="hours" value="Segunda a sexta, 8h às 18h"></label>
+      <label class="field"><span>Responsável</span><input name="owner" value="Bruno Machado"></label>
+      <div class="form-actions field--full"><button class="btn btn--primary" type="submit">Salvar configurações</button></div>
+    </form>
+  </article>
+  <article class="panel reveal">
+    <div class="panel__header"><div><h2>Preferências</h2><p>Notificações e tema visual.</p></div></div>
+    <div class="settings-list">
+      <label class="switch-row"><span>Notificar chamados críticos</span><input type="checkbox" checked><i></i></label>
+      <label class="switch-row"><span>Resumo diário por e-mail</span><input type="checkbox" checked><i></i></label>
+      <label class="switch-row"><span>Alertar SLA em risco</span><input type="checkbox" checked><i></i></label>
+      <label class="switch-row"><span>Tema escuro</span><input type="checkbox" data-theme-checkbox><i></i></label>
+    </div>
+  </article>
+</section>
+<section class="dashboard-grid">
+  <article class="panel reveal"><div class="panel__header"><div><h2>Categorias de chamado</h2><p>Classificação usada na demo.</p></div></div><div class="tag-list"><span>Hardware</span><span>Software</span><span>Rede</span><span>Impressora</span><span>E-mail</span><span>Sistema</span><span>Acesso</span><span>Segurança</span></div></article>
+  <article class="panel reveal"><div class="panel__header"><div><h2>Regras de SLA</h2><p>Prazos fictícios por prioridade.</p></div></div><div class="sla-rules"><div><strong>Crítica</strong><span>Resposta em 15 min • Resolução em 4h</span></div><div><strong>Alta</strong><span>Resposta em 30 min • Resolução em 8h</span></div><div><strong>Média</strong><span>Resposta em 2h • Resolução em 24h</span></div><div><strong>Baixa</strong><span>Resposta em 4h • Resolução em 48h</span></div></div></article>
+</section>
+
+    </main>
+    <footer class="app-footer">HelpCore Demo • Projeto fictício para portfólio • HTML, CSS e JavaScript puro</footer>
+  </div>
+</div>
+<button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>↑</button>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

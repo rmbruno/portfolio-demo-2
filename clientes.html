@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes HelpCore — Empresas atendidas</title>
+  <meta name="description" content="Página fictícia de clientes atendidos pelo HelpCore com busca, filtros, planos e status de contrato.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="app-page">
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="app-shell">
+  
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar__brand">
+    <a class="brand" href="index.html" aria-label="HelpCore">
+      <span class="brand__mark">H</span>
+      <span>HelpCore</span>
+    </a>
+    <button class="sidebar-collapse" type="button" aria-label="Recolher sidebar" data-sidebar-collapse>‹</button>
+  </div>
+  <nav class="sidebar__nav" aria-label="Navegação administrativa">
+    <a href="dashboard.html" data-nav-link><span>▦</span><b>Dashboard</b></a>
+    <a href="chamados.html" data-nav-link><span>□</span><b>Chamados</b></a>
+    <a href="fila.html" data-nav-link><span>⇄</span><b>Fila</b></a>
+    <a href="clientes.html" data-nav-link><span>◉</span><b>Clientes</b></a>
+    <a href="tecnicos.html" data-nav-link><span>◎</span><b>Técnicos</b></a>
+    <a href="relatorios.html" data-nav-link><span>▥</span><b>Relatórios</b></a>
+    <a href="configuracoes.html" data-nav-link><span>⚙</span><b>Configurações</b></a>
+  </nav>
+  <div class="sidebar__mini-card">
+    <span>SLA geral</span>
+    <strong>91%</strong>
+    <small>Meta mensal: 88%</small>
+  </div>
+</aside>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+  <div class="app-main">
+    
+<header class="app-topbar">
+  <div class="topbar-left">
+    <button class="icon-button" type="button" aria-label="Abrir menu administrativo" data-mobile-sidebar>☰</button>
+    <div>
+      <h1>Clientes</h1>
+      <p>Empresas atendidas, planos, responsáveis internos e histórico recente.</p>
+    </div>
+  </div>
+  <div class="topbar-search" role="search">
+    <span>⌕</span>
+    <input type="search" placeholder="Buscar chamados, clientes ou técnicos..." aria-label="Busca global visual">
+  </div>
+  <div class="topbar-actions">
+    
+    <button class="icon-button" type="button" aria-label="Alternar tema" data-theme-toggle>◐</button>
+    <div class="user-chip" aria-label="Usuário conectado">
+      <span class="avatar avatar--sm">BM</span>
+      <div><strong>Bruno Machado</strong><small>Gerente de TI</small></div>
+    </div>
+  </div>
+</header>
+
+    <main id="conteudo" class="app-content">
+      
+<section class="panel reveal">
+  <div class="panel__header panel__header--stack"><div><h2>Clientes atendidos</h2><p>Empresas fictícias com contrato, plano, chamados e último atendimento.</p></div></div>
+  <div class="filters-grid filters-grid--small">
+    <label class="field"><span>Buscar cliente</span><input id="clientSearch" type="search" placeholder="Nome da empresa"></label>
+    <label class="field"><span>Plano</span><select id="planFilter"><option value="">Todos</option><option>Starter</option><option>Professional</option><option>Enterprise</option></select></label>
+  </div>
+  <div class="client-grid" id="clientsGrid"></div>
+  <div class="empty-state" id="clientsEmpty" hidden>Nenhum cliente encontrado.</div>
+</section>
+
+    </main>
+    <footer class="app-footer">HelpCore Demo • Projeto fictício para portfólio • HTML, CSS e JavaScript puro</footer>
+  </div>
+</div>
+<button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>↑</button>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

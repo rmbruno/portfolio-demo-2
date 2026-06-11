@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamados HelpCore — Lista e filtros</title>
+  <meta name="description" content="Listagem fictícia de chamados HelpCore com busca, filtros, badges, detalhes e criação simulada.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="app-page">
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="app-shell">
+  
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar__brand">
+    <a class="brand" href="index.html" aria-label="HelpCore">
+      <span class="brand__mark">H</span>
+      <span>HelpCore</span>
+    </a>
+    <button class="sidebar-collapse" type="button" aria-label="Recolher sidebar" data-sidebar-collapse>‹</button>
+  </div>
+  <nav class="sidebar__nav" aria-label="Navegação administrativa">
+    <a href="dashboard.html" data-nav-link><span>▦</span><b>Dashboard</b></a>
+    <a href="chamados.html" data-nav-link><span>□</span><b>Chamados</b></a>
+    <a href="fila.html" data-nav-link><span>⇄</span><b>Fila</b></a>
+    <a href="clientes.html" data-nav-link><span>◉</span><b>Clientes</b></a>
+    <a href="tecnicos.html" data-nav-link><span>◎</span><b>Técnicos</b></a>
+    <a href="relatorios.html" data-nav-link><span>▥</span><b>Relatórios</b></a>
+    <a href="configuracoes.html" data-nav-link><span>⚙</span><b>Configurações</b></a>
+  </nav>
+  <div class="sidebar__mini-card">
+    <span>SLA geral</span>
+    <strong>91%</strong>
+    <small>Meta mensal: 88%</small>
+  </div>
+</aside>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+  <div class="app-main">
+    
+<header class="app-topbar">
+  <div class="topbar-left">
+    <button class="icon-button" type="button" aria-label="Abrir menu administrativo" data-mobile-sidebar>☰</button>
+    <div>
+      <h1>Chamados</h1>
+      <p>Controle completo de solicitações técnicas, prioridades, status e SLA.</p>
+    </div>
+  </div>
+  <div class="topbar-search" role="search">
+    <span>⌕</span>
+    <input type="search" placeholder="Buscar chamados, clientes ou técnicos..." aria-label="Busca global visual">
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn--primary" type="button" data-open-new-ticket>Novo chamado</button>
+    <button class="icon-button" type="button" aria-label="Alternar tema" data-theme-toggle>◐</button>
+    <div class="user-chip" aria-label="Usuário conectado">
+      <span class="avatar avatar--sm">BM</span>
+      <div><strong>Bruno Machado</strong><small>Gerente de TI</small></div>
+    </div>
+  </div>
+</header>
+
+    <main id="conteudo" class="app-content">
+      
+<section class="panel reveal">
+  <div class="panel__header panel__header--stack">
+    <div><h2>Lista de chamados</h2><p>Busque, filtre, visualize detalhes e simule a abertura de um novo atendimento.</p></div>
+    <button class="btn btn--primary" type="button" data-open-new-ticket>Novo chamado</button>
+  </div>
+  <div class="filters-grid">
+    <label class="field"><span>Busca</span><input id="ticketSearch" type="search" placeholder="Código, título, cliente ou técnico"></label>
+    <label class="field"><span>Status</span><select id="statusFilter"><option value="">Todos</option><option>Novo</option><option>Em atendimento</option><option>Aguardando cliente</option><option>Resolvido</option><option>Encerrado</option></select></label>
+    <label class="field"><span>Prioridade</span><select id="priorityFilter"><option value="">Todas</option><option>Baixa</option><option>Média</option><option>Alta</option><option>Crítica</option></select></label>
+    <label class="field"><span>Categoria</span><select id="categoryFilter"><option value="">Todas</option><option>Hardware</option><option>Software</option><option>Rede</option><option>Impressora</option><option>E-mail</option><option>Sistema</option><option>Acesso</option><option>Segurança</option></select></label>
+  </div>
+  <div class="table-wrap"><table class="data-table data-table--tickets"><thead><tr><th>Código</th><th>Título</th><th>Cliente</th><th>Técnico</th><th>Categoria</th><th>Prioridade</th><th>Status</th><th>SLA</th><th>Abertura</th><th>Ação</th></tr></thead><tbody id="ticketsTableBody"></tbody></table></div>
+  <div class="empty-state" id="ticketsEmpty" hidden>Nenhum chamado encontrado para os filtros selecionados.</div>
+</section>
+
+<div class="modal" data-ticket-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ticketModalTitle">
+  <div class="modal__overlay" data-close-modal></div>
+  <article class="modal__content">
+    <button class="modal__close" type="button" aria-label="Fechar modal" data-close-modal>×</button>
+    <div id="ticketModalContent"></div>
+  </article>
+</div>
+
+<div class="modal" data-new-ticket-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="newTicketTitle">
+  <div class="modal__overlay" data-close-modal></div>
+  <article class="modal__content">
+    <button class="modal__close" type="button" aria-label="Fechar modal" data-close-modal>×</button>
+    <h2 id="newTicketTitle">Novo chamado fictício</h2>
+    <p class="muted">Preencha os dados para simular a criação de um chamado localmente.</p>
+    <form class="form-grid" id="newTicketForm">
+      <label class="field"><span>Título</span><input name="title" required placeholder="Ex.: Computador reiniciando sozinho"></label>
+      <label class="field"><span>Cliente</span><select name="client" required></select></label>
+      <label class="field"><span>Técnico</span><select name="technician" required></select></label>
+      <label class="field"><span>Categoria</span><select name="category" required><option>Hardware</option><option>Software</option><option>Rede</option><option>Impressora</option><option>E-mail</option><option>Sistema</option><option>Acesso</option><option>Segurança</option></select></label>
+      <label class="field"><span>Prioridade</span><select name="priority" required><option>Baixa</option><option>Média</option><option>Alta</option><option>Crítica</option></select></label>
+      <label class="field field--full"><span>Descrição</span><textarea name="description" rows="4" placeholder="Descreva a solicitação técnica"></textarea></label>
+      <div class="form-actions field--full"><button class="btn btn--ghost" type="button" data-close-modal>Cancelar</button><button class="btn btn--primary" type="submit">Criar chamado</button></div>
+    </form>
+  </article>
+</div>
+
+    </main>
+    <footer class="app-footer">HelpCore Demo • Projeto fictício para portfólio • HTML, CSS e JavaScript puro</footer>
+  </div>
+</div>
+<button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>↑</button>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

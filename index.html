@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpCore — Dashboard SaaS de Helpdesk</title>
+  <meta name="description" content="Landing page fictícia do HelpCore, plataforma SaaS para suporte técnico, helpdesk, atendimento interno e controle de SLA.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="">
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="public-header" data-public-header>
+    <div class="container public-header__inner">
+      <a class="brand" href="index.html" aria-label="HelpCore - Página inicial">
+        <span class="brand__mark">H</span>
+        <span>HelpCore</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-public-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="public-nav" aria-label="Menu principal" data-public-nav>
+        <a href="index.html">Início</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="chamados.html">Chamados</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="configuracoes.html">Configurações</a>
+      </nav>
+      <div class="public-actions">
+        <a class="btn btn--ghost" href="dashboard.html">Entrar na demo</a>
+        <a class="btn btn--primary" href="chamados.html">Novo chamado</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Helpdesk SaaS para equipes técnicas</span>
+          <h1>Centralize chamados, SLA e filas de atendimento em uma única plataforma.</h1>
+          <p>O HelpCore transforma solicitações dispersas em um fluxo organizado de suporte, com prioridades claras, responsáveis definidos e visão rápida dos gargalos da operação.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary btn--large" href="dashboard.html">Entrar na demo</a>
+            <a class="btn btn--soft btn--large" href="chamados.html">Ver chamados</a>
+          </div>
+          <div class="hero-stats" aria-label="Métricas fictícias do HelpCore">
+            <div><strong>128</strong><span>chamados abertos</span></div>
+            <div><strong>91%</strong><span>SLA cumprido</span></div>
+            <div><strong>18 min</strong><span>tempo médio de resposta</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Mockup visual do dashboard HelpCore">
+          <div class="mockup mockup--hero">
+            <div class="mockup__bar"><span></span><span></span><span></span><b>HelpCore Control</b></div>
+            <div class="mockup__body">
+              <aside class="mockup__side"><i></i><i></i><i></i><i></i></aside>
+              <div class="mockup__content">
+                <div class="mockup-cards">
+                  <article><span>Abertos</span><strong>128</strong></article>
+                  <article><span>Críticos</span><strong>14</strong></article>
+                  <article><span>SLA</span><strong>91%</strong></article>
+                </div>
+                <div class="mockup-row">
+                  <div class="mockup-chart"><span style="--h:72%"></span><span style="--h:44%"></span><span style="--h:58%"></span><span style="--h:86%"></span><span style="--h:63%"></span></div>
+                  <div class="mockup-ticket"><b>#HC-1025</b><p>Erro ao acessar sistema financeiro</p><small class="badge badge--critical">Crítica</small></div>
+                </div>
+                <div class="mockup-table"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-pill float-pill--one">SLA em risco: 6</div>
+          <div class="float-pill float-pill--two">Fila N1 organizada</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section logos-section">
+      <div class="container">
+        <p>Empresas fictícias que poderiam organizar a operação de suporte com HelpCore</p>
+        <div class="logo-row">
+          <span>Alpha Contabilidade</span><span>NorteLog</span><span>VivaMais</span><span>Conecta</span><span>Escola Futuro</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-heading reveal">
+        <span class="eyebrow">Benefícios</span>
+        <h2>Controle técnico sem planilhas paralelas.</h2>
+        <p>Priorização, histórico, técnicos responsáveis e relatórios simples para equipes que precisam responder rápido.</p>
+      </div>
+      <div class="container cards-grid three">
+        <article class="feature-card reveal"><span class="icon-box">▣</span><h3>Fila organizada</h3><p>Classifique solicitações por etapa, prioridade, cliente e responsável para evitar retrabalho.</p></article>
+        <article class="feature-card reveal"><span class="icon-box">⏱</span><h3>SLA visível</h3><p>Identifique chamados em risco antes que o prazo seja perdido e aja com antecedência.</p></article>
+        <article class="feature-card reveal"><span class="icon-box">⇧</span><h3>Produtividade do time</h3><p>Acompanhe resolução por técnico, gargalos por categoria e atividades recentes em tempo real visual.</p></article>
+      </div>
+    </section>
+
+    <section class="section feature-band">
+      <div class="container split-grid">
+        <div class="feature-illustration reveal" aria-hidden="true">
+          <div class="flow-node node-1">Solicitação</div><div class="flow-node node-2">Triagem</div><div class="flow-node node-3">Técnico</div><div class="flow-node node-4">SLA</div>
+          <svg viewBox="0 0 560 320"><path d="M90 90 C180 30, 280 80, 360 120"/><path d="M160 230 C260 290, 380 250, 460 170"/><path d="M120 110 C210 170, 270 200, 390 205"/></svg>
+        </div>
+        <div class="section-copy reveal">
+          <span class="eyebrow">Funcionalidades</span>
+          <h2>Um painel completo para acompanhar atendimento interno.</h2>
+          <ul class="check-list">
+            <li>Registro de chamados por categoria, cliente, status e prioridade.</li>
+            <li>Kanban para avançar etapas do atendimento com um clique.</li>
+            <li>Métricas de SLA, tempo médio de resposta e ranking de clientes.</li>
+            <li>Configurações simuladas de tema, notificações e regras de prazo.</li>
+          </ul>
+          <a class="btn btn--soft" href="dashboard.html">Explorar dashboard</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-heading reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Da abertura à resolução com clareza operacional.</h2>
+      </div>
+      <div class="container steps-grid">
+        <article class="step-card reveal"><span>01</span><h3>Registre e classifique</h3><p>Transforme e-mails, mensagens e solicitações internas em chamados padronizados.</p></article>
+        <article class="step-card reveal"><span>02</span><h3>Distribua por responsável</h3><p>Priorize criticidade, acompanhe o técnico responsável e mantenha a fila atualizada.</p></article>
+        <article class="step-card reveal"><span>03</span><h3>Meça desempenho</h3><p>Veja SLA, resolução mensal, clientes com maior volume e produtividade por técnico.</p></article>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container section-heading reveal"><span class="eyebrow">Depoimentos fictícios</span><h2>Interface simples para uso diário da equipe.</h2></div>
+      <div class="container cards-grid three">
+        <article class="testimonial-card reveal"><div class="avatar">LM</div><p>“O HelpCore trouxe clareza para nossa fila de suporte e reduziu o tempo de resposta.”</p><strong>Larissa Mota</strong><span>Coordenadora de TI</span></article>
+        <article class="testimonial-card reveal"><div class="avatar">FT</div><p>“Agora conseguimos acompanhar prioridades, SLA e responsáveis sem planilhas paralelas.”</p><strong>Felipe Torres</strong><span>Gestor administrativo</span></article>
+        <article class="testimonial-card reveal"><div class="avatar">AP</div><p>“A interface é simples o suficiente para a equipe usar no dia a dia, mas completa para gestão.”</p><strong>Aline Pereira</strong><span>Suporte N1</span></article>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container cta-card reveal">
+        <span class="eyebrow">Demo navegável</span>
+        <h2>Acesse o painel administrativo e simule uma operação real de helpdesk.</h2>
+        <p>Explore chamados, fila kanban, clientes, técnicos, relatórios e configurações usando dados fictícios no JavaScript.</p>
+        <div class="hero-actions"><a class="btn btn--primary btn--large" href="dashboard.html">Entrar na demo</a><a class="btn btn--soft btn--large" href="relatorios.html">Ver relatórios</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__mark">H</span>
+          <span>HelpCore</span>
+        </a>
+        <p>Dashboard SaaS fictício para gestão de chamados, SLA e atendimento técnico. Criado como case profissional de portfólio.</p>
+      </div>
+      <div>
+        <h3>Produto</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="chamados.html">Chamados</a>
+        <a href="fila.html">Fila Kanban</a>
+        <a href="relatorios.html">Relatórios</a>
+      </div>
+      <div>
+        <h3>Operação</h3>
+        <a href="clientes.html">Clientes</a>
+        <a href="tecnicos.html">Técnicos</a>
+        <a href="configuracoes.html">Configurações</a>
+        <a href="README.md">README</a>
+      </div>
+      <div>
+        <h3>Contato fictício</h3>
+        <p>suporte@helpcore.demo</p>
+        <p>São Gabriel, RS</p>
+        <p>Segunda a sexta, 8h às 18h</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 HelpCore. Projeto fictício para portfólio.</span>
+      <span>HTML, CSS e JavaScript puro.</span>
+    </div>
+  </footer>
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>↑</button>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
